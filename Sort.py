@@ -27,4 +27,4 @@ if __name__ == '__main__':
 
     selection_sort(array)
     insertion_sort(array)
-    
+
