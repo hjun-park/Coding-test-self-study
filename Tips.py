@@ -24,3 +24,11 @@ d2 = list(set(d))
 # 7. 중복제거하고 정렬하지 않기
 from collections import OrderedDict
 list( OrderedDict.fromkeys(d).keys())
+
+# 8. 이차원 정사각 행렬 입력받기
+n = int(sys.stdin.readline())
+a = [list(sys.stdin.readline()) for _ in range(n)]
+
+# 9. 좌표문제 풀 때는 dx, dy 리스트를 선언해주어서 접근해보기
+dx = [-1, 0, 1, 0]
+dy = [0, 1, 0, -1]
