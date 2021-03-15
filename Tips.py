@@ -32,3 +32,8 @@ a = [list(sys.stdin.readline()) for _ in range(n)]
 # 9. 좌표문제 풀 때는 dx, dy 리스트를 선언해주어서 접근해보기
 dx = [-1, 0, 1, 0]
 dy = [0, 1, 0, -1]
+
+# 10. 재귀 한도 해제
+import sys
+sys.setrecursionlimit(10000)    # 재귀 한도를 풀어줌
+
