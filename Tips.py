@@ -37,3 +37,15 @@ dy = [0, 1, 0, -1]
 import sys
 sys.setrecursionlimit(10000)    # 재귀 한도를 풀어줌
 
+# 11. 파이썬 기본 라이브러리 이용하여 역순 정렬
+array = sorted(array, reverse=True)
+
+# 12. 키를 이용하여 점수를 기준으로 정렬
+array.append((input_data[0], int(input_data[1])))
+array = sorted(array, key = lambda student: student[1]) # array에서 2번째 인자 기준으로 정렬
+
+# 13. 많은 값들을 입력 받을 때 빠르게 입력받으려면 sys 라이브러리 사용
+import sys
+input_data = sys.stdin.readline().rstrip()
+print(input_data)
+
