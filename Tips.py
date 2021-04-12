@@ -49,3 +49,10 @@ import sys
 input_data = sys.stdin.readline().rstrip()
 print(input_data)
 
+# 14. 두 개의 좌표를 입력받는 방법
+for i in range(N):
+    coordinate.append(list(map(int, sys.stdin.readline().split())))
+
+# 15. 조건 2가지 이상의 정렬 할 때는 lambda를 이용하는 것이 좋음
+# x[0]에 대해서 먼저 정렬 후 x[1]에 대해서 정렬
+coordinate.sort(key=lambda x: (x[0], x[1]))
