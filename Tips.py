@@ -56,3 +56,14 @@ for i in range(N):
 # 15. 조건 2가지 이상의 정렬 할 때는 lambda를 이용하는 것이 좋음
 # x[0]에 대해서 먼저 정렬 후 x[1]에 대해서 정렬
 coordinate.sort(key=lambda x: (x[0], x[1]))
+
+# 16. 2차원 배열 입력받아서 생성하는 방법
+for i in range(X):
+    wb_list.append([i for i in sys.stdin.readline().rstrip()])
+
+# 17. 각 컬럼마다 한번씩 접근해서 2차원 행렬의 값을 불러오는 방법
+sliced_matrix = [x[col:col + 8] for x in wb_list[row:row + 8]]
+
+
+# 18. 리스트 거꾸로 출력
+num[::-1] == num # (num은 그냥 숫자)
