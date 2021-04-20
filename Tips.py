@@ -67,3 +67,9 @@ sliced_matrix = [x[col:col + 8] for x in wb_list[row:row + 8]]
 
 # 18. 리스트 거꾸로 출력
 num[::-1] == num # (num은 그냥 숫자)
+
+# 19. 큐에서 리스트를 각 원소별로 관리하기에는 deque가 좋음
+from collections import deque
+num_queue = deque([x for x in range(1, N+1)])
+temp = num_queue.popleft()
+
