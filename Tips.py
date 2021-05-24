@@ -73,3 +73,10 @@ from collections import deque
 num_queue = deque([x for x in range(1, N+1)])
 temp = num_queue.popleft()
 
+# 20. deque에서 특정 원소 개수 세기 위해서,
+#     리스트와 함께 사용한다.
+s = deque([])
+
+# 21. 큐에 대한 루프를 돌 때는 사이즈로 도는 것이 아니라
+#      while 문을 써서 전체가 빌 때까지로 해본다.
+while s: ... # <== deque는 이렇게 루핑돌리기
