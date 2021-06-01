@@ -80,3 +80,10 @@ s = deque([])
 # 21. 큐에 대한 루프를 돌 때는 사이즈로 도는 것이 아니라
 #      while 문을 써서 전체가 빌 때까지로 해본다.
 while s: ... # <== deque는 이렇게 루핑돌리기
+
+# 22. 2차원 배열을 이용하는 문제에서 굳이 2차원 배열 만들 필요가 없으면 행 하나씩 비교하는 방법으로 처리
+for i in range(n):
+    data = list(map(int, sys.stdin.readline().split()))
+
+# 23. ascii 문자를 정수로 변환
+int(ord('a'))
