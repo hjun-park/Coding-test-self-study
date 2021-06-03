@@ -17,7 +17,6 @@ solution_list = [ 'A' for _ in range(len(input_list))]
 # 5. 차집합을 이용해서 리스트 생성
 _reserve = [r for r in reserve if r not in lost]
 
-
 # 6. 중복제거하고 정렬
 d2 = list(set(d))
 
@@ -29,7 +28,7 @@ list( OrderedDict.fromkeys(d).keys())
 n = int(sys.stdin.readline())
 a = [list(sys.stdin.readline()) for _ in range(n)]
 
-# 9. 좌표문제 풀 때는 dx, dy 리스트를 선언해주어서 접근해보기
+# 9. 2차원 행렬, 좌표문제 풀 때는 dx, dy 리스트를 선언해주어서 접근해보기
 dx = [-1, 0, 1, 0]
 dy = [0, 1, 0, -1]
 
@@ -87,3 +86,19 @@ for i in range(n):
 
 # 23. ascii 문자를 정수로 변환
 int(ord('a'))
+
+# 24. list comprehension 을 이용하여 2차원 행렬의 초기화 ( n x m )
+d = [[0] * m for _ in range(n)]
+
+
+# 25. N * M 2차원 배열 입력받기 ( 리스트 형식 )
+graph = []
+for i in range(n):
+    graph.append(list(map(int, sys.stdin.readline().split())))
+
+# 26. 한 번에 입력받을 때 split을 이용하여 하나의 변수에 모두 담을 수 있음
+input_data = sys.stdin.readline().rstrip().split()
+
+# 27. 계수정렬에서 반복문을 split으로 입력받을 수 있음
+for i in input().split():
+    array[int(i)] = 1
