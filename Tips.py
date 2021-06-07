@@ -102,3 +102,8 @@ input_data = sys.stdin.readline().rstrip().split()
 # 27. 계수정렬에서 반복문을 split으로 입력받을 수 있음
 for i in input().split():
     array[int(i)] = 1
+
+# 28. 2차원 리스트(그래프 표현) 만든 후 모든 값 무한으로 초기화
+INF = int(1e9)
+graph = [[INF] * (n+1) for _ in range(n+1)]
+
