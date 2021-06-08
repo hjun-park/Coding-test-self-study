@@ -107,3 +107,28 @@ for i in input().split():
 INF = int(1e9)
 graph = [[INF] * (n+1) for _ in range(n+1)]
 
+# 29. 알파벳인 것을 확인하는 방법
+if x.isalpha():
+
+# 30. 리스트를 문자열로 바꾸어 출력
+print(''.join(result))
+
+# 31. 좌표 입력받는 방법
+for _ in range(L):
+    x, c = map(int, input().split())
+    info.append((int(x), c))
+
+# 32. 좌표 입력받는 방법 2
+for i in range(k):
+    a, b = map(int, input().split())
+    apple[a][b] = 1
+
+# 33. 시뮬레이션 문제 중 좌표 방향을 전환하는 방법
+def turn(direction, c):
+    if c == "L":
+        direction = (direction - 1) % 4
+    else:
+        direction = (direction + 1) % 4
+    return direction
+
+
