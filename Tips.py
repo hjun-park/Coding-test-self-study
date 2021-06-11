@@ -89,6 +89,7 @@ int(ord('a'))
 
 # 24. list comprehension 을 이용하여 2차원 행렬의 초기화 ( n x m )
 d = [[0] * m for _ in range(n)]
+graph = [[] for _ in range(n + 1)]  # 2차원 배열 ( N x N )
 
 
 # 25. N * M 2차원 배열 입력받기 ( 리스트 형식 )
@@ -130,5 +131,12 @@ def turn(direction, c):
     else:
         direction = (direction + 1) % 4
     return direction
+
+# 34. 순열과 조합을 이용하는 방법
+# 모든 치킨집 중에서 m개의 치킨집을 뽑는 조합 계산
+from itertools import combinations
+candidates = list(combinations(chicken, m))  # 총 리스트 chicken 개수 중에서 m개만을 선택하는 경우
+# candidate 값은 좌표가 들어가서 저렇게 나옴, 저렇게 나온 경우는 조합 경우의 수가 5라는 의미
+print(f'candidate: {candidates}')   # candidate: [((0, 1),), ((1, 1),), ((2, 1),), ((3, 1),), ((4, 1),)]
 
 
