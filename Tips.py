@@ -149,3 +149,13 @@ print(list(product(['+', '-', '*', '/'], repeat=(n - 1))))
 min_value = 1e9
 max_value = -1e9
 
+# 37. 더 쉬운 방법 - 한 줄로 정렬이 가능하다.
+data.sort(key=lambda x: (-int(x[1]), int(x[2]), -int(x[3]), x[0]))
+
+# 38. 1부터 10000까지 루프를 돌면서 각 자리의 수를 더하는 예제
+# # ex) 123 = 1 + 2 + 3
+generated_num = set()
+for i in range(1, 10001):
+    for j in str(i):
+        i += int(j)
+        generated_num.add(i)
