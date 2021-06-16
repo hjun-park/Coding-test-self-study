@@ -159,3 +159,7 @@ for i in range(1, 10001):
     for j in str(i):
         i += int(j)
         generated_num.add(i)
+
+# 39. 리스트에 해당 수가 들어간 개수가 몇 개인지 number[i]에 집어넣음
+number[i] = n.count(str(i))
+
