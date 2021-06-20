@@ -163,3 +163,5 @@ for i in range(1, 10001):
 # 39. 리스트에 해당 수가 들어간 개수가 몇 개인지 number[i]에 집어넣음
 number[i] = n.count(str(i))
 
+# 40. 집합 자료형에서 x라는 값을 제거함
+s.discard(x)
