@@ -165,3 +165,41 @@ number[i] = n.count(str(i))
 
 # 40. 집합 자료형에서 x라는 값을 제거함
 s.discard(x)
+
+# 41. 리스트 컴프리헨션
+# 0부터 19까지 수 중에서 홀수만 포함하는 리스트
+array = [i for i in range(20) if i % 2 == 1]
+# 1부터 9까지의 수 중 제곱 값만을 포함하는 리스트
+array = [i * i for i in range(1, 10)]
+
+# 42. N*M 크기의 2차원 리스트 초기화
+n = 3
+m = 4
+array = [[0] * m for _ in range(n)]
+
+# 43. 딕셔너리 자료형
+data = dict()
+data['사과'] = 'Apple'
+data['바나나'] = 'Banana'
+
+if '사과' in data:
+    print("사과를 키로 가지는 데이터가 존재합니다")
+
+key_list = data.keys() # 키 데이터만 담긴 리스트
+value_list = data.values() # 값 데이터만 남긴 리스트
+
+# 키에 따른 값을 하나씩 출력
+for key in key_list:
+    print(data[key])
+
+# 44. 집합 자료형의 연산
+a = set([1, 2, 3, 4, 5])
+b = set([3, 4, 5, 6, 7])
+
+print(a | b) # 합집합
+print(a & b) # 교집합
+print(a - b) # 차집합
+
+
+
+

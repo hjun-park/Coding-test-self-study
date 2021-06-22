@@ -32,7 +32,7 @@ def solution(scoville, K):
 
     hq.heapify(scoville)
     answer = 0
-    while True:
+    while True:  // while scoville: ==> len(scoville) == 0 존재
         first = hq.heappop(scoville)
         if first >= K:
             break
