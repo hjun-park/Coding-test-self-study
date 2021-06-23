@@ -200,6 +200,13 @@ print(a | b) # 합집합
 print(a & b) # 교집합
 print(a - b) # 차집합
 
+# 45. 리스트에서 특정한 값 제거
+A.pop(A.index(min(A)))
+B.pop(B.index(max(B))) # 값 -> 인덱스 -> pop
+
+
+
+
 
 
 

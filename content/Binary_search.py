@@ -49,3 +49,9 @@ if result is None:
     print("원소가 존재하지 않습니다.")
 else:
     print(result + 1)  # 몇 번째 자리
+
+
+# 01. 원소 개수 n과 찾고자 하는 문자열 target
+# 02. array : 전체 원소
+
+
