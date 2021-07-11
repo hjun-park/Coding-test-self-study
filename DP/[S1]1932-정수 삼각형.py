@@ -47,9 +47,9 @@ for _ in range(n):
 for i in range(1, n):
     for j in range(len(data[i])):
         if j == 0:  # 제일 왼쪽의 값은 왼쪽 대각선이 없음
-            data[i][j] += data[i - 1][j]
+            data[i][j] += data[i - 1][j]    # 왼쪽 대각선 대신 맨 처음 값으로 지정
         elif j == len(data[i]) - 1:  # 제일 오른쪽 값은 오른쪽 대각선이 없음
-            data[i][j] += data[i - 1][j - 1]
+            data[i][j] += data[i - 1][j - 1] # 맨 오른쪽이라면 맨 오른쪽값으로 [i-1][j]는 인덱스가 없음
         else:
             # 점화식, 왼쪽 및 오른쪽 위 대각선을 가지고 처리
             data[i][j] += max(data[i - 1][j - 1], data[i - 1][j])
