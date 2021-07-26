@@ -204,7 +204,9 @@ print(a - b) # 차집합
 A.pop(A.index(min(A)))
 B.pop(B.index(max(B))) # 값 -> 인덱스 -> pop
 
-
+# 46. 리스트
+ps_list = list(map(str, input())) # 요소 하나하나 들어감
+ps_list_merge = list(map(str, input().split()))   # 요소 전체를 하나로 묶어 집어넣음
 
 
 
