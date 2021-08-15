@@ -208,6 +208,15 @@ B.pop(B.index(max(B))) # 값 -> 인덱스 -> pop
 ps_list = list(map(str, input())) # 요소 하나하나 들어감
 ps_list_merge = list(map(str, input().split()))   # 요소 전체를 하나로 묶어 집어넣음
 
+# 47. 해당 인덱스가 영문자거나 숫자인지 확인하는 방법
+sl[index].isalnum()
+
+# 48. Counter를 이용하면 문자 개수를 알 수 있음
+s = list(map(int, sys.stdin.readline().split()))
+cnt = Counter(s)
+
+# 49. 리스트의 모든 내용을 출력하는 방법
+print(*result)
 
 
 
