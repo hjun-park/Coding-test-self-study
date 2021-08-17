@@ -218,6 +218,15 @@ cnt = Counter(s)
 # 49. 리스트의 모든 내용을 출력하는 방법
 print(*result)
 
+# 50. 알파벳 리스트를 만드는 방법
+import string
+str_list = list(sys.stdin.readline().rstrip())
+alpha_list = string.ascii_lowercase
+alpha_dict = dict.fromkeys(alpha_list, -1)
+
+
+
+
 
 
 
