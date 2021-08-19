@@ -224,6 +224,10 @@ str_list = list(sys.stdin.readline().rstrip())
 alpha_list = string.ascii_lowercase
 alpha_dict = dict.fromkeys(alpha_list, -1)
 
+# 51. DP에서 0부터 시작이 아닌 i+1부터 값을 담고 싶다면
+p = [0] + list(map(int, sys.stdin.readline().split()))
+
+# 52. 이차원 배열 생성 방법
 
 
 
