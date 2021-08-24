@@ -1,3 +1,7 @@
+# 1. 시작점이 끝점을 넘기기 전까지 수행
+# 2.
+
+
 def binary_search_iterable(array, target, start, end):
     # 01. 제약조건 : 시작점이 끝점을 넘어서기까지 수행
     while start <= end:
