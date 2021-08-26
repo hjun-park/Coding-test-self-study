@@ -1,14 +1,22 @@
 import sys
 
-n, k = map(int, input().split())
-numbers = list(sys.stdin.readline().rstrip())
+# stack을 이용하여 풀어야 한다. (시간 및 메모리초과)
+# 스택과 num을 비교하여 큰 num값이 들어오면 stack에서 빼준다.
 
-# 1. k개 삭제하여 가장 큰 수를 만들어야 함
-for _ in range(k):
-    max_value = max(numbers)
+N, K = map(int, input().split())
+numbers = list(input())
 
+stack = []
+k = K
 
-# 0부터 len(array)-k 까지 순회하며 max를 찾음
-# max의 index값부터 시작해서 다음 값을 찾음,
-# 만약 같은 값이라면 그 앞의 값을 추출할 것
-#
+# 숫자 전체를 순환
+for num in numbers:
+    # 스택이 비어있지 않고 스택 끝값보다 큰 num값이 들어온다면 수행
+    while stack and k > 0 and stack[-1] < num:
+        print('del')
+        del stack[-1]
+        k -= 1
+    stack.append(num)
+
+print(stack)
+print(''.join(stack[:N-K]))
