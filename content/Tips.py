@@ -227,7 +227,15 @@ alpha_dict = dict.fromkeys(alpha_list, -1)
 # 51. DP에서 0부터 시작이 아닌 i+1부터 값을 담고 싶다면
 p = [0] + list(map(int, sys.stdin.readline().split()))
 
-# 52. 이차원 배열 생성 방법
+# 52. 이차원배열(행렬)을 순회하면서 새로운 좌표 리스트 생성 방법
+chicken = [[i, j] for i in range(n) for j in range(n) if graph[i][j] == 2]
+home = [[i, j] for i in range(n) for j in range(n) if graph[i][j] == 1]
+
+# 53. 행렬(matrix) 최댓값 찾기
+max_val = max(map(max, graph))
+
+# 54. DFS 방문 기록 관련 히스토리 리스트 선언
+history = [[False] * m for _ in range(n)]
 
 
 
