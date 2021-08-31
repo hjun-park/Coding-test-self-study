@@ -5,7 +5,7 @@ import sys
 
 n = int(input())  # 보드 크기 nxn
 k = int(input())  # 사과의 개수 K
-point = []
+point = [[0] * n for _ in range(n)]
 
 # 사과의 위치 입력받음
 for i in range(k):
@@ -18,7 +18,7 @@ L = int(input())
 # (X, C) : X초가 지난 뒤에 C는 L(왼쪽)인지 D(오른쪽)인지 방향 90도 회전
 info = []  # 방향 회전 정보
 for _ in range(L):
-    x, c = map(int, input().split())
+    x, c = map(str, input().split())
     info.append((int(x), c))
 
 # 처음에는 동쪽을 보고 있으므로 [동, 남, 서, 북]
