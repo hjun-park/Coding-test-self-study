@@ -2,32 +2,26 @@ import sys
 from collections import deque
 
 def bfs(graph, start, visited):
-    # bfs는 즉시 방문처리하고 출력, 옆으로 이동
+    queue = deque([start])
     visited[start] = True
-    queue = deque([start])  # 지점 넣기
 
-    # 큐를 순회하며 bfs
     while queue:
         v = queue.popleft()
-        print(v, end=' ')
+        print(v, end=' ')   # 출력을 바로 하는 DFS와 다르게 BFS는 출력을 먼저 하지 않음
 
-        # 인접리스트 확인
         for i in graph[v]:
             if not visited[i]:
                 queue.append(i)
                 visited[i] = True
 
 
-
-
 def dfs(graph, v, visited):
-    # 일단 방문처리 후 출력 ( 파고드는 형태 )
+    print(v, end=' ')
     visited[v] = True
-    print(v, end = ' ')
 
-    # 인접리스트 순회하면서 확인
+    # 인접리스트 확인
     for i in graph[v]:
-        if not visited[i]:  # 미방문지라면 재귀 이용하여 DFS
+        if not visited[i]:
             dfs(graph, i, visited)
 
 

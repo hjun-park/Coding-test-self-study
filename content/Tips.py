@@ -237,6 +237,11 @@ max_val = max(map(max, graph))
 # 54. DFS 방문 기록 관련 히스토리 리스트 선언
 history = [[False] * m for _ in range(n)]
 
+# 55. 간선이 연결된 경우 서로 대칭해주어 저장해야 한다.
+for _ in range(M):
+    u, v = map(int, input().split())
+    graph[u].append(v)
+    graph[v].append(u)
 
 
 
