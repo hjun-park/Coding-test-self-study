@@ -243,6 +243,10 @@ for _ in range(M):
     graph[u].append(v)
     graph[v].append(u)
 
+# 56. 없는 인덱스에도 입력받을 수 있도록 하는 리스트 생성
+from collections import defaultdict
+graph = defaultdict(list)
+
 
 
 

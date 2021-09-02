@@ -27,6 +27,8 @@ for _ in range(M):
     graph[u].append(v)
     graph[v].append(u)
 
+print(graph)
+
 # 정점은 1부터 시작함
 count = 0
 for i in range(1, N+1):
