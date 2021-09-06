@@ -3,6 +3,7 @@ array = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
 
 i = 0
 def quick_sort(array):
+    global i
     # 리스트가 하나 이하의 원소를 가지고 있다면 정렬 할 필요가 없으므로 종료
     if len(array) <= 1:
         return array
@@ -15,10 +16,12 @@ def quick_sort(array):
 
     # 분할 이후 왼쪽 부분과 오른쪽 부분에서 각각 정렬 수행 후 반환
     print(f'======= {i} =======')
-    print(left_side)
-    print(right_side)
-    print(left_side + [pivot] + right_side)
+    print(f'pivot : {pivot}')
+    print(f'left_side : {left_side}')
+    print(f'right_side : {right_side}')
+    print(f'merge : {left_side + [pivot] + right_side}')
 
+    i += 1
     return quick_sort(left_side) + [pivot] + quick_sort(right_side)
 
 
