@@ -248,6 +248,7 @@ from collections import defaultdict
 graph = defaultdict(list)
 
 
-
+# 57. [1,2,3,4,5] 입력이 들어왔을 때 1 ~ 4만 리스트에 순수하게 담고 싶을 때
+num_list = list(input().rstrip()[1:-1].split(','))
 
 
