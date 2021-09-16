@@ -251,4 +251,27 @@ graph = defaultdict(list)
 # 57. [1,2,3,4,5] 입력이 들어왔을 때 1 ~ 4만 리스트에 순수하게 담고 싶을 때
 num_list = list(input().rstrip()[1:-1].split(','))
 
+# 58. BFS 에서 가중치를 이용할 수 있는데, 비교 후 큐에 집어넣을 때
+# 가장 먼저 빨리 빼고 싶다면 appendleft
+# 늦게 빼고싶다면 append를 이용
+# ==> 가중치 처음시작할 때는 dist[0][0] = 0 해 주는 것이 필요
+dist = [[-1] * M for _ in range(N)]
+
+# 59. 알파벳 단어사전 생성
+alpha_dict = dict.fromkeys(string.ascii_uppercase, 0)
+
+# 60. 문자열의 끝을 제거하는 방법
+'''
+['B', 'A', 'C']
+['B', 'A']
+'''
+s = s[:-1]
+
+# 61. [1192문제]
+# 이전 거를 들고 안 들고 가면 모든 부분을 확인할 수 있다.
+dfs(idx + 1, sum - s_[idx])
+dfs(idx + 1, sum)
+
+
+
 
