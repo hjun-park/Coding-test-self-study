@@ -268,9 +268,15 @@ alpha_dict = dict.fromkeys(string.ascii_uppercase, 0)
 s = s[:-1]
 
 # 61. [1192문제]
-# 이전 거를 들고 안 들고 가면 모든 부분을 확인할 수 있다.
+# 이전 거를 들고 가면 모든 부분을 확인할 수 있다.
 dfs(idx + 1, sum - s_[idx])
 dfs(idx + 1, sum)
+
+# 62. 그래프를 한 번에 출력하는 방법
+for row in board:
+    print(*row)
+
+
 
 
 
