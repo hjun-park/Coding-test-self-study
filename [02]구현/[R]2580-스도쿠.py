@@ -88,12 +88,12 @@ box_arr = [[False] * 10 for _ in range(10)]
 pos = []
 for r in range(9):
     for c in range(9):
-        if not board[r][c]:
-            pos.append([r, c])
+        if not board[r][c]: # 빈 자리 (0) 가 아닐 경우에
+            pos.append([r, c])  # pos에 해당 좌표 추가
         else:
-            row_arr[r][board[r][c]] = True
-            col_arr[c][board[r][c]] = True
-            box_arr[r // 3 * 3 + c // 3][board[r][c]] = True
+            row_arr[r][board[r][c]] = True      # 행(좌우) 체크
+            col_arr[c][board[r][c]] = True      # 열(상하) 체크
+            box_arr[r // 3 * 3 + c // 3][board[r][c]] = True    # 대각선 체크
 
 blank_num = len(pos)
 dfs(0)
