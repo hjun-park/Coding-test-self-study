@@ -276,8 +276,10 @@ dfs(idx + 1, sum)
 for row in board:
     print(*row)
 
+# 63. [12886번] 튜플을 이용해서 방문 그래프 작성
+    visited[tuple(stones)] = True
 
-
-
+# 64. 삼중배열
+visited = [[[0] * 2 for _ in range(M)] for _ in range(N)]
 
 
