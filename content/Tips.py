@@ -282,4 +282,12 @@ for row in board:
 # 64. 삼중배열
 visited = [[[0] * 2 for _ in range(M)] for _ in range(N)]
 
+# 65. 이차원 배열을 담으면서 중간에 값을 추가로 담고자 할 경우 [ 경쟁적 전염 ]
+for i in range(n):
+    data.append(list(map(int, input().split())))
+    for j in range(n):  # 입력된 정보를 확인
+        # 해당 위치에 바이러스가 존재하는 경우
+        if graph[i][j] != 0:
+            data.append(graph[i][j], 0, i, j)  # 바이러스 종류, 시간, x, y 좌표
+
 
