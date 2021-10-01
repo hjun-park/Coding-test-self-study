@@ -290,4 +290,14 @@ for i in range(n):
         if graph[i][j] != 0:
             data.append(graph[i][j], 0, i, j)  # 바이러스 종류, 시간, x, y 좌표
 
+# 66. list의 경우 deepcopy를 해야 완전한 복사가 가능하다.
+#  equal (=) 이용한 대입의 경우 포인터처럼 끌어 당긴 상태가 되어 완전한 복사가 아닌 참조가 된다.
+import copy
+r1 = copy.deepcopy(A)
+r2 = copy.deepcopy(A)
 
+# 67. 비트 연산
+
+for b in range(1 << N):
+    print(b)    # N이 8이라면 2^8 을 의미
+                # 만약 2 << N이라면 2^8*2 의미
