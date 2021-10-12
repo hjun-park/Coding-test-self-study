@@ -301,3 +301,25 @@ r2 = copy.deepcopy(A)
 for b in range(1 << N):
     print(b)    # N이 8이라면 2^8 을 의미
                 # 만약 2 << N이라면 2^8*2 의미
+
+
+
+# 68. defaultdict 사용법
+# wear_dict이라는 defaultdict 만들고 값을 추가하는 과정
+for _ in range(T):
+    n = int(input().rstrip())
+    wear_dict = defaultdict(list)
+
+    for i in range(n):
+        name, kind = input().split()
+        wear_dict[kind].append(name)
+
+# 69. 유클리드 호제법
+def gcd(x, y):
+    mod = x % y
+    while mod > 0:
+        x = y
+        y = mod # y는 나누어지는 수
+        mod = x % y
+    return y
+
