@@ -323,3 +323,17 @@ def gcd(x, y):
         mod = x % y
     return y
 
+# 70. 더 짧은 GCD 구하기
+def gcd2(x, y):
+    while y:
+        x, y = y, x % y
+    return x
+
+# 71. 유클리드 호제법 LCM
+def lcm(x, y):
+    return (x * y) // gcd(x, y)
+
+# 72. collections deque는 rotate함수가 있어서 편하게 사용할 수 있다.
+l = deque([0, 1, 1, 1, 1])
+l.rotate(1)
+
