@@ -337,3 +337,9 @@ def lcm(x, y):
 l = deque([0, 1, 1, 1, 1])
 l.rotate(1)
 
+# 73. [14890] 행과 열을 각각 연산하는 방법
+for i in range(N):
+    cnt += check_level(graph[i])                    # 행
+    cnt += check_level([row[i] for row in graph])   # 열
+
+
