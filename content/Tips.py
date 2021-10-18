@@ -342,4 +342,19 @@ for i in range(N):
     cnt += check_level(graph[i])                    # 행
     cnt += check_level([row[i] for row in graph])   # 열
 
+# 74. append와 extend의 차이점
+x = ['Tick', 'Tock', 'Song']
+y = ['Ping', 'Pong']
+x.append(y)
+print('x:', x)
 
+x = ['Tick', 'Tock', 'Song']
+y = ['Ping', 'Pong']
+x.extend(y)
+print('x:', x)
+
+'''
+출력 결과
+x: ['Tick', 'Tock', 'Song', ['Ping', 'Pong']]
+x: ['Tick', 'Tock', 'Song', 'Ping', 'Pong']
+'''
