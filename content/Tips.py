@@ -358,3 +358,12 @@ print('x:', x)
 x: ['Tick', 'Tock', 'Song', ['Ping', 'Pong']]
 x: ['Tick', 'Tock', 'Song', 'Ping', 'Pong']
 '''
+
+
+# 75. graph에 여러 정보들을 저장하고 싶을 때
+trees = [[deque() for _ in range(N)] for _ in range(N)]
+dead_trees = [[list() for _ in range(N)] for _ in range(N)]
+
+# 76. for문 구현에 도움되는 예제
+# 3085-사탕 게임
+
