@@ -367,3 +367,49 @@ dead_trees = [[list() for _ in range(N)] for _ in range(N)]
 # 76. for문 구현에 도움되는 예제
 # 3085-사탕 게임
 
+# 77. 이차원배열 가로, 세로 사이즈
+print(len(graph[1]))    # 세로
+print(len(graph))   # 가로
+
+# 78. 딕셔너리 관련한 함수
+# https://gomguard.tistory.com/126
+# 예제
+from collections import defaultdict
+
+graph = [2, 1, 1, 3, 5, 3]
+num_dict = defaultdict(int)
+
+for key in graph:
+    num_dict[key] += 1
+
+arr = (sorted(num_dict.items(), key=lambda x: x[1]))
+
+
+# 79. 행과 열을 바꾸는 방법
+if len(graph) < len(graph[0]):
+    graph = list(zip(*graph))  # zip을 이용하면 행과 열 바꿀 수 있음
+
+
+# 80. Counter 모듈 사용법
+from  collections import Counter
+
+# 0을 배제 후 재 정렬하는 작업
+a = [i for i in graph[j] if j != 0]  # 0의 경우 미리 배제
+a = Counter(a).most_common()  # 배제 후 각 숫자가 몇 개 있는지 센다 (리턴: 딕셔너리)
+ # 어떠한 수가 몇개 인지를 딕셔너리로 표현
+a.sort(key=lambda x: (x[1], x[0]))  # 딕셔너리를 value먼저 이후 key 기준으로 정렬한다.
+graph[j] = []  # 행을 초기화한다.
+
+
+# 81. 함수를 이용해서 정렬도 가능하다.
+def sum_num(arr):
+    result = 0
+    for num in arr:
+        if num.isdigit():
+            result += int(num)
+    return result
+
+# 함수를 이용해서 정렬도 가능하다.
+serial.sort(key=lambda x: (len(x), sum_num(x), x))
+
+
