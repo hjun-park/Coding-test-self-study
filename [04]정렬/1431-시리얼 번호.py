@@ -16,6 +16,7 @@ def sum_num(arr):
             result += int(num)
     return result
 
+
 # 함수를 이용해서 정렬도 가능하다.
 serial.sort(key=lambda x: (len(x), sum_num(x), x))
 
