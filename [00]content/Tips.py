@@ -413,3 +413,14 @@ def sum_num(arr):
 serial.sort(key=lambda x: (len(x), sum_num(x), x))
 
 
+# 82. DFS에서 한방향씩 트는게 아닌 끝까지 가는 경우라면
+#  이 방식보다
+for d in range(4):
+    nx = x + dx[d]
+    ny = y + dy[d]
+
+# 이 방식이 낫다.
+while True:
+    if '범위초과 시':
+        d += 1
+        continue
