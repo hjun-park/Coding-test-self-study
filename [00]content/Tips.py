@@ -424,3 +424,18 @@ while True:
     if '범위초과 시':
         d += 1
         continue
+
+# 83. 2차원 배열의 가로세로를 바꾸어주는 방법
+col_check = list(map(list, zip(*check)))
+
+# 84. 리스트 쪼개기
+print(' '.join(map(str, v)))
+
+# 85. 배수를 비교할 때는 절반까지만 비교해도 됨
+for i in range(1, (len(switch) // number) + 1):
+    if switch[(number * i) - 1] == 1:
+        switch[(number * i) - 1] = 0
+    else:
+        switch[(number * i) - 1] = 1
+
+
