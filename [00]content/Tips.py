@@ -438,4 +438,14 @@ for i in range(1, (len(switch) // number) + 1):
     else:
         switch[(number * i) - 1] = 1
 
+# 86. 2차원 배열 합 구하는 방법
+dividend = sum(map(sum, graph))
+
+
+# 87. 하나의 리스트에 여러 값을 추가하는 방법
+temp = []
+a = [1, 2]
+b = [3, 4]
+
+temp += (a, b)
 
