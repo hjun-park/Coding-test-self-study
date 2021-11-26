@@ -19,4 +19,4 @@ for num in numbers:
     stack.append(num)
 
 print(stack)
-print(''.join(stack[:N-K]))
+print(''.join(stack[:N - K]))

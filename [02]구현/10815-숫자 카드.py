@@ -29,5 +29,5 @@ comp_numbers = list(map(int, input().split()))
 #         print(0, end=' ')
 
 for comp in comp_numbers:
-    result = binary_search(numbers, comp, 0, N-1)
+    result = binary_search(numbers, comp, 0, N - 1)
     print(result, end=' ')

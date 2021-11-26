@@ -13,7 +13,7 @@ s.sort()
 
 # 이중 포인터 설정
 left = 0
-right = N-1
+right = N - 1
 
 min_value = 2e+9+1
 

@@ -19,7 +19,7 @@ for i in range(N - 1, 0, -1):
 
 # 2) 그 다음으로 다시 역순조회하며 array[x] 보다 큰 array[i]를 발견할 때마다
 #   서로 swap 후에 x+1부터 마지막까지
-for i in range(N-1, 0, -1):
+for i in range(N - 1, 0, -1):
     if array[x] < array[i]:
         array[x], array[i] = array[i], array[x]
         array = array[:x+1] + sorted(array[x+1:])

@@ -21,7 +21,7 @@ min_value = 1e9
 # x에 도착하면 y로 이동한다.
 stairs_and_snakes = list(range(101))
 saved_min_dice = [101] * 101
-for _ in range(N+M):
+for _ in range(N + M):
     x, y = map(int, input().split())
     stairs_and_snakes[x] = y
 

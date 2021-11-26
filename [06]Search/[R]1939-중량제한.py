@@ -16,7 +16,7 @@ input = sys.stdin.readline
 '''
 
 N, M = map(int, input().split())  # 섬의 개수, 다리 개수
-bridge = [[] for _ in range(N+1)]
+bridge = [[] for _ in range(N + 1)]
 
 for _ in range(M):  
     A, B, C = list(map(int, input().split()))

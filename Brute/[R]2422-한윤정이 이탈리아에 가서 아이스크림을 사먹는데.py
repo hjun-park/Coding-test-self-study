@@ -30,11 +30,11 @@ else:
         no_mix[b].append(a)
 
     # 아이스크림 개수만큼 순회
-    for i in range(1, N+1):
-        for j in range(i+1, N+1):
+    for i in range(1, N + 1):
+        for j in range(i+1, N + 1):
             if j in no_mix[i]:
                 continue
-            for k in range(j+1, N+1):
+            for k in range(j+1, N + 1):
                 if k in no_mix[i] or k in no_mix[j]:
                     continue
                 count += 1

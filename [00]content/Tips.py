@@ -333,6 +333,9 @@ def gcd2(x, y):
 def lcm(x, y):
     return (x * y) // gcd(x, y)
 
+# 71-1. 여러개의 최소공배수를 구하기 위해서는 (A, B, C) 있다고 가정
+# A-B 최소공배수 구하고 그 구한 값과 C의 최소공배수를 구한다.
+
 # 72. collections deque는 rotate함수가 있어서 편하게 사용할 수 있다.
 l = deque([0, 1, 1, 1, 1])
 l.rotate(1)

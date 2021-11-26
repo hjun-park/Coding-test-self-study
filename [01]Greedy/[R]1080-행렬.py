@@ -11,14 +11,14 @@ def convert(x, y, before_matrix):
             before_matrix[i][j] = 1-before_matrix[i][j]
 
 
-for i in range(0, N-2):
+for i in range(0, N - 2):
     for j in range(0, M-2):
         if before_matrix[i][j] != after_matrix[i][j]:
             count += 1
             convert(i, j, before_matrix)
 
 # 전체 배열 검사
-for i in range(0,N):
+for i in range(0, N):
     for j in range(0,M):
         if before_matrix[i][j] != after_matrix[i][j]:
             print(-1)

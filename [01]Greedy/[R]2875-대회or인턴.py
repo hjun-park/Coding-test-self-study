@@ -12,4 +12,4 @@ while K != 0:
         M -= 1
         K -= 1
 
-print(min(N//2, M))
+print(min(N // 2, M))

@@ -46,4 +46,4 @@ def BFS(x, y):
 
 
 BFS(0, 0)
-print(dist[N-1][M-1])
+print(dist[N - 1][M - 1])

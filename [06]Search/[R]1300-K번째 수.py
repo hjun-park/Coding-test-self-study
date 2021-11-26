@@ -31,4 +31,4 @@ def binary_search(start, end, target):
             start = mid + 1
 
 
-binary_search(1, N**2, k)
+binary_search(1, N ** 2, k)

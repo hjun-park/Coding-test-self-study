@@ -41,7 +41,7 @@ def dijkstra(start):
 
 dijkstra(start)
 
-for i in range(1, N+1):
+for i in range(1, N + 1):
     if distance[i] == INF:
         print("INF")
     else:

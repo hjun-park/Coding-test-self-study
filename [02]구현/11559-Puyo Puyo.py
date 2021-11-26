@@ -32,8 +32,8 @@ N, M = 12, 6
 # 뿌요뿌요 판을 예시로 실제 좌표 찍어가면서 알아보는 수밖에 없음
 def down():
     for x in range(M):
-        for y in range(N-1, -1, -1):
-            for z in range(N-1, y, -1):
+        for y in range(N - 1, -1, -1):
+            for z in range(N - 1, y, -1):
                 if graph[y][x] != '.' and graph[z][x] == '.':
                     graph[z][x] = graph[y][x]
                     graph[y][x] = '.'
