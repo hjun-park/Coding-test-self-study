@@ -4,10 +4,10 @@ import sys
 input = sys.stdin.readline
 
 N = int(input().rstrip())
-numbers = []
+hq = []
 
 for _ in range(N):
-    heapq.heappush(numbers, int(input().rstrip()))
+    heapq.heappush(hq, int(input().rstrip()))
 
 '''
     문제 핵심
@@ -17,14 +17,15 @@ for _ in range(N):
     3) 길이가 1인 경우는 비교할 이유가 없다. (0번)
 '''
 
-if len(numbers) == 0:
+if len(hq) == 0:
     print(0)
 
 result = 0
-while len(numbers) > 1:
-    card1 = heapq.heappop(numbers)
-    card2 = heapq.heappop(numbers)
-    result += (card1 + card2)
-    heapq.heappush(numbers, card1 + card2)
+while len(hq) > 1:  # 한 번에 2개를 뽑을 것이기 때문에 길이가 2 이상
+    pack1 = heapq.heappop(hq)
+    pack2 = heapq.heappop(hq)
+
+    result += (pack1 + pack2)
+    heapq.heappush(hq, pack1 + pack2)
 
 print(result)
