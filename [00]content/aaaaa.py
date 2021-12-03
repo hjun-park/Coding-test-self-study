@@ -13,3 +13,7 @@
 #
 # for row in board:
 #     print(*row)
+
+
+mapped_value = map(int, input().split())
+
