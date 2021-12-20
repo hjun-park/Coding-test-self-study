@@ -453,4 +453,17 @@ b = [3, 4]
 temp += (a, b)
 
 
+# 88. 2차원배열 최댓값과 인덱스 구하기
+import sys
+
+input = sys.stdin.readline
+
+graph = [list(map(int, input().split())) for _ in range(9)]
+
+max_value = max(map(max, graph))
+x = [x for x in graph if max_value in x][0]
+
+print(max_value)
+print(f'{graph.index(x)+1} {x.index(max_value)+1}')
+
 
