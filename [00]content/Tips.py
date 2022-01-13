@@ -483,3 +483,7 @@ def solution(n):
 # 101. 이진법 변환 방법
 string_bin = format(n, 'b')
 
+# 102. 숫자 개수 카운트 하는 방법
+from collections import Counter
+a = [1, 2, 1, 1, 3, 4]
+dic = Counter(a)
