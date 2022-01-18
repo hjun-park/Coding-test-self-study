@@ -22,17 +22,6 @@ def solution(n, m, x, y, queries):
     # 공을 거꾸로 돌려 가능한 시작점의 범위를 구하면 된다.
     for d, dx in queries[::-1]:
         if d == 0:  # 열 감소, 거꾸로 생각하면 열 증가
-            '''
-                left != 0의 이유
-                 - left 증가 후 right 증가하는 형태로 되어 있는데 
-                 - left가 0이라면 right가 증가하면서 영역이 회복된다.
-                 - 다른 d에서도 마찬가지다.
-                 
-                 - 무슨 말이지? 
-                 -  d==0 이라면 왼쪽으로 이동 시 판단기준 벽은 0인 상황
-                 -  만약 left가 0이라면 즉, left가 벽에 부딪힌 상황이라면
-                 -  상대방 변 (left기준은 right)인 right 하나만 움직이면 된다.
-            '''
             if left != 0:
                 left += dx  # 왼쪽 라인은 dx만큼 오른쪽 이동
                 if left > m - 1:  # 왼쪽 라인이 최대치를 벗어난 경우 left는 m-1
