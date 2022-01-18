@@ -268,3 +268,7 @@ string_bin = format(n, 'b')
 from collections import Counter
 a = [1, 2, 1, 1, 3, 4]
 dic = Counter(a)
+
+# 103. 두 번 뒤집는 것은 아예 안 뒤집은 것 하고 똑같다.
+#      여러 번 뒤집는 문제의 경우 뒤집지 말고 그 count를 세어서 count 홀/짝 여부에 따라 뒤집기 여부를 결정한다.
+
