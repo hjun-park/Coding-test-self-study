@@ -238,6 +238,7 @@ for i in range(1, (len(switch) // number) + 1):
 
 # 86. 2차원 배열 합 구하는 방법
 dividend = sum(map(sum, graph))
+ice = sum(sum(graph, list))
 
 # 87. 하나의 리스트에 여러 값을 추가하는 방법
 temp = []
