@@ -12,15 +12,15 @@ def solution(s):
 
     for ss in s:
 
-        # 2) 열린 괄호일 경우 카운트 증가
+        # 2-1) 열린 괄호일 경우 카운트 증가
         if ss == '(':
             count += 1
 
-        # 3) 닫힌 괄호일 경우
+        # 2-2) 닫힌 괄호일 경우 카운트 감소
         else:
             count -= 1
 
-        # count가 0보다 닫는 괄호가 더 추가된 것이므로 False
+        # count가 0보다 작으면 닫는 괄호가 더 추가된 것이므로 False
         if count < 0:
             return False
 
