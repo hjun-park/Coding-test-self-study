@@ -32,6 +32,6 @@ for i in range(N):
     while stack and tower_list[stack[-1]] < tower:
         stack.pop()
     if stack:     # 스택에 수신할 탑이 있는 경우
-        result[i] = stack[-1] + 1   #
+        result[i] = stack[-1] + 1
     stack.append(i)
 print(' '.join(map(str, result)))
