@@ -5,7 +5,7 @@ input = sys.stdin.readline
 N = int(input().rstrip())
 graph = [list(input().split()) for _ in range(N)]
 
-dic = {"-1": 0, "0": 0, "1": 0}
+dic = { "-1": 0, "0": 0, "1": 0}
 
 
 def logic(r, c, n):
