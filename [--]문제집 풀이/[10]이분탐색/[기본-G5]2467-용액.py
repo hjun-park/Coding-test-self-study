@@ -15,37 +15,34 @@ liq = list(map(int, input().split()))
     
     시간복잡도 1초, 값의 범위는 20억, O(lgN) 내로 해결 필요
     
-    [풀이과정] binary search + two pointer
+    [풀이과정] 투 포인터
     1. left, right 를 각각 처음 idx, 끝 idx 설정
-    2. 연산진행 -> 음수면 right-1, 양수면 left +1
-    3. left가 right를 넘어서면 종료 
+    2. (sol1 + sol2) > liq[left] + liq[right] 조건만족 시 sol1, 2값 갱신
+    3. left, right 를 각각 이동한 경우를 비교 
+     3-1) abs(liq[left + 1] + liq[right])
+     3-2) abs(liq[left] + liq[right - 1])
+     3-3) 이 둘을 비교, 값이 더 작은 쪽으로 축을 조정 
+    4. left가 right를 넘어서면 종료, sol1, sol2 출력
 
 '''
 
 L, R = 0, N - 1
 min_liq = int(1e9)
-sol1, sol2 = 0, 0
+sol1, sol2 = int(1e9), int(1e9)
 
 
 def find_minimum():
     global min_liq, L, R, sol1, sol2
 
     while L < R:
-        abs_solution = abs(liq[L] + liq[R])
-        non_solution = liq[L] + liq[R]
+        if abs(sol1 + sol2) > abs(liq[L] + liq[R]):
+            sol1 = liq[L]
+            sol2 = liq[R]
 
-        if abs_solution <= min_liq:
-            min_liq = abs_solution
-            sol1, sol2 = liq[L], liq[R]
-
-        if non_solution == 0:
-            break
-
-        elif non_solution < 0:
-            L += 1
-
-        else:
+        if abs(liq[L + 1] + liq[R]) >= abs(liq[L] + liq[R - 1]):
             R -= 1
+        else:
+            L += 1
 
 
 find_minimum()
