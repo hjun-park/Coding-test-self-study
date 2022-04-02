@@ -5,8 +5,8 @@ input = sys.stdin.readline
 
 N = int(input().rstrip())
 kits = list(map(int, input().split()))
-_len = len(kits)
-eq = sum(kits) // _len
+N = len(kits)
+eq = sum(kits) // N
 eq_list = [eq for _ in range(N)]
 
 pos = 0
@@ -45,7 +45,7 @@ while True:
         kits[pos] -= 1
         kits[pos + 1] += 1
 
-    elif pos == _len - 1:
+    elif pos == N - 1:
         kits[pos] -= 1
         kits[pos - 1] += 1
 

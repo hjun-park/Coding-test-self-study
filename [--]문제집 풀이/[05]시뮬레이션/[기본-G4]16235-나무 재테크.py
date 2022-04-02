@@ -69,11 +69,11 @@ for _ in range(K):
     # 3-1) 루프 순회
     for i in range(N):
         for j in range(N):
-            _len = len(trees[i][j])
-            for k in range(_len):
+            N = len(trees[i][j])
+            for k in range(N):
                 # 양분보다 나무의 나이가 더 큰 경우는 나무가 죽음
                 if graph[i][j] < trees[i][j][k]:
-                    for _ in range(k, _len):
+                    for _ in range(k, N):
                         dead_trees[i][j].append(trees[i][j].pop())
                     break
 
