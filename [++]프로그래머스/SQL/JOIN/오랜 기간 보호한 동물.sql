@@ -1,0 +1,20 @@
+/*
+ [테이블]
+ ANIMAL_INS : 보호소
+ ANIMAL_OUTS : 입양
+ 외래키 : ANIMAL_ID
+
+ [구할것]
+ - 입양을 가지 못한 동물 중 (ANIMAL_INS에는 있지만 OUT에는 없음)
+ - 가장 오래 보호소에 있었던 동물 3마리 (LIMIT 3)
+ - NAME과 DATETIME을 조회
+ - ORDER BY 보호시작일
+*/
+
+SELECT AI.NAME, AI.DATETIME
+FROM ANIMAL_INS AI
+LEFT JOIN ANIMAL_OUTS AO
+ON AI.ANIMAL_ID = AO.ANIMAL_ID
+WHERE AO.ANIMAL_ID IS NULL
+ORDER BY AI.DATETIME
+LIMIT 3

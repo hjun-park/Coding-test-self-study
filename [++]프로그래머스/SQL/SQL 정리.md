@@ -1,12 +1,16 @@
 ## 코테용 SQL 정리
 
-### SQL 링크
+### SQL 링크 - 링크만 봐도 됨
 
 - [sql 쿼리테스트](https://sqltest.net/#)
 - [해커랭크 sql문제](https://www.hackerrank.com/domains/sql)
 - [프로그래머스 sql문제](https://programmers.co.kr/)
 - [좋은 블로그 글](https://dogsavestheworld.tistory.com/87?category=1004602)
 - [좋은 블로그 글:JOIN편](https://dogsavestheworld.tistory.com/89?category=1004602)
+- [프로그래머스 쿼리문제 총정리](https://shjz.tistory.com/114)
+- [LEFT JOIN 주의점](https://kimsyoung.tistory.com/entry/3%EA%B0%9C-%EC%9D%B4%EC%83%81%EC%9D%98-%ED%85%8C%EC%9D%B4%EB%B8%94-LEFT-JOIN-%ED%95%98%EA%B8%B0)
+- [JOIN의 방식](https://moonpiechoi.tistory.com/115)
+- [JOIN을 표료 표현](https://intrepidgeeks.com/tutorial/database-mysql-join)
 
 <br />
 
@@ -229,6 +233,15 @@ SELECT NAME, DATE_FORMAT(DATETIME, "%Y-%m")
 
 <br />
 
+### SUBSTRING_INDEX
+WHERE SUBSTRING_INDEX(AI._UPON_INTAKE, ' ', 1) = 'Spayed'
+
+
+SELECT ANIMAL_ID, NAME, CASE WHEN SEX_UPON_INTAKE LIKE "%Neutered%" OR SEX_UPON_INTAKE LIKE "%Spayed%" THEN "O" ELSE "X" END AS "중성화" 
+FROM ANIMAL_INS
+
+
+<br />
 
 
 ## JOIN
