@@ -27,9 +27,16 @@ for _ in range(m):
 for k in range(1, n + 1):
     for i in range(1, n + 1):
         for j in range(1, n + 1):
-            graph[i][j] = min(graph[i][j], graph[i][k] + graph[k][j])
+            if i != j and graph[i][j] > graph[i][k] + graph[k][j]:
+                graph[i][j] = graph[i][k] + graph[k][j]
+            # graph[i][j] = min(graph[i][j], graph[i][k] + graph[k][j])
 
 for i in range(1, n + 1):
     for j in range(1, n + 1):
-        print(graph[i][j], end=' ')
+        # 함정(2) 도달하지 못하는 구역은 갱신되지 못하고 기본값(int(1e9))으로 남아있는 경우가 있음
+        if graph[i][j] == int(1e9):
+            print(0, end=' ')
+        else:
+            print(graph[i][j], end=' ')
     print()
+
