@@ -3,8 +3,6 @@ import sys
 input = sys.stdin.readline
 
 N = int(input().rstrip())
-graph = [['*' for _ in range(N)] for _ in range(N)]
-
 '''
     [함수 정의]
     def logic(N, st, en):
