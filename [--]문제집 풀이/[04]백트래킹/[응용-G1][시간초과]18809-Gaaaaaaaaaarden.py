@@ -8,13 +8,11 @@ N, M, G, R = map(int, input().split())
 
 # 0: 호수 / 1: 배양액 못 뿌리는 땅 / 2: 배양액 뿌리는 땅
 graph = [list(map(int, input().split())) for _ in range(N)]
-# red = [[0] * M for _ in range(N)]
-# green = [[0] * M for _ in range(N)]
 # 0: 없음 / 1: Green / 2: Red / 3: 꽃
 field = [[0] * M for _ in range(N)]
 dx = [0, -1, 0, 1]
 dy = [-1, 0, 1, 0]
-
+ # 1
 '''
     [요약]
     1. 배양액은 황토색 칸에만 뿌릴 수 있음 / 하얀색은 뿌릴 수 없음 / 호수는 배양액이 못 감
