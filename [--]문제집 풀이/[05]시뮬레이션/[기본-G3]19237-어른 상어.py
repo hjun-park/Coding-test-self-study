@@ -77,10 +77,12 @@ def simulation():
     for x in range(N):
         for y in range(N):
             if board[x][y] is not None:
+
+                board[x][y][SCENT] -= 1
+
                 if board[x][y][SCENT] == 0:
                     board[x][y] = None
-                else:
-                    board[x][y][SCENT] -= 1
+
 
 
 N, M, K = map(int, input().split())
@@ -99,7 +101,7 @@ sharks = [0] * M
 
 # 1) board를 순회하면서 상어가 담겨있다면 sharks 리스트에 위치와 방향 정보를 담아준다.
 # 이 때 board에는 상어 번호가 1-index 형식이므로 0-index로 바꾸기 위해 1을 빼준다.
-# 만약 k가 3이고 상어가 냄새를 뿌렸다면 3 -> 2 -> 1 -> 0(냄새존재) -> None(냄새없음) 순으로 감소 예정
+# 만약 k가 3이고 상어가 냄새를 뿌렸다면 3 -> 2 -> 1 -> 0과 동시에 None(냄새없음) 순으로 감소 예정
 # 그렇기 때문에 현재 board에서 0인 경우는 None으로 바꾸어 준다.
 for i in range(N):
     for j in range(N):
