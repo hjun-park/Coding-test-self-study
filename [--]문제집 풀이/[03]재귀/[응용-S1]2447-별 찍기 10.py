@@ -2,7 +2,7 @@ import sys
 
 input = sys.stdin.readline
 
-N = int(input().rstrip())
+# N = int(input().rstrip())
 '''
     [함수 정의]
     def logic(N, st, en):
@@ -37,7 +37,10 @@ def logic(n):
     for s in stars:
         L.append(s * 3)
 
+    for row in L:
+        print(row)
+
     return L
 
-
-print('\n'.join(logic(N)))
+# logic(27)
+# print('\n'.join(logic(9)))
