@@ -1,3 +1,7 @@
+# lower bound 알고리즘
+# --> [카카오2021] 순위 검색 참고
+
+
 # 재귀함수로 구현한 이진탐색
 def binary_search_recursive(array, target, start, end):
     if start > end:
@@ -35,6 +39,8 @@ def binary_search_iterable(array, target, start, end):
             start = mid + 1
 
     return None
+
+
 
 
 # 원소개수 n 찾고자 하는 문자열 target

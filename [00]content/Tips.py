@@ -288,3 +288,23 @@ a = [1, 2]
 b = [[1, 2], [3, 4]]
 copied_a = a.copy()
 copied_b = b.deepcopy()
+
+# 105. split에도 list comprehension 사용
+query = ["java and backend and junior and pizza 100", "python and frontend and senior and chicken 200",
+     "cpp and - and senior and pizza 250", "- and backend and senior and - 150", "- and - and - and chicken 100",
+     "- and - and - and - 150"]
+for q in query:
+    row = [x for x in q.split() if x != 'and' and x != '-']
+    print(row)
+
+# 106. 시간계산 하는 방법
+from datetime import datetime
+
+st = '01:10'
+en = '02:20'
+start = datetime.strptime(st, "%H:%M")
+end = datetime.strptime(en, "%H:%M")
+
+diff = end - start
+
+
