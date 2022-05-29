@@ -62,6 +62,7 @@ def bfs():
             return "IMPOSSIBLE"
 
         # 5) 다음으로 지훈이가 아닌 불이 1초동안 이동할 수 있는 곳을 파악하기 위해 temp를 초기화한다.
+        # 마찬가지로 temp를 사용하지 않으면 '1초동안' 불이 이동한 것을 체크하지 못한다. (새로 append된 불의 좌표도 계속해서 확인하기 때문)
         temp = deque()
         while f:
             x, y = f.popleft()

@@ -26,9 +26,15 @@ result = [0] * N
 
 '''
 
+# stack :
 for i in range(N):
-    tower = tower_list[i]
-    # 스택에 있는 것들보다
+    print('다음 타워 기준 잡기')
+    print(f'stack = {stack}')
+    print(f'result = {result}')
+    print()
+    tower = tower_list[i]   # 기준 타워
+    # 스택에 값은 있는데 기준타워보다 높이가 작아 기준타워의 레이저를 받지 못한다면 stack에서 pop
+    # pop을 해 주는 이유는 기준타워보다 높이가 작다면 기준타워+1번째에서 레이저를 쏴도 도달하지 못할 것이다.
     while stack and tower_list[stack[-1]] < tower:
         stack.pop()
     if stack:     # 스택에 수신할 탑이 있는 경우
