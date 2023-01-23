@@ -37,6 +37,7 @@ d[i] = d[i-1] + d[i-2] + d[i-3]
 '''
 
 # TODO: TOP-DOWN, BOTTOM-UP 구분하면 좋을 문제
+# TODO : 정리
 
 nums = [int(input().rstrip()) for _ in range(int(input().rstrip()))]
 d = [0] * (max(nums) + 2)
