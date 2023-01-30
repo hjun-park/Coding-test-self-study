@@ -2,6 +2,8 @@ import sys
 
 input = sys.stdin.readline
 
+
+# TODO : BOTTOM -UP 방식
 '''
 1) DP 테이블 정의 ( a = 정답 b이다 )
 
