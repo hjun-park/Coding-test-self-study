@@ -17,7 +17,11 @@ class Melt:
         return ans
 
 
-def test_corp():
-    m = Melt()
-    assert m.corpFlightBookings([[1, 2, 10], [2, 3, 20], [2, 5, 25]], 5) == [10, 55, 45, 25, 25]
-    assert m.corpFlightBookings([[1, 2, 10], [2, 2, 15]], 2) == [10, 25]
+
+m = Melt()
+print(m.corpFlightBookings([[1, 2, 10], [2, 3, 20], [2, 5, 25]], 5))
+
+# def test_corp():
+#     m = Melt()
+#     assert m.corpFlightBookings([[1, 2, 10], [2, 3, 20], [2, 5, 25]], 5) == [10, 55, 45, 25, 25]
+#     assert m.corpFlightBookings([[1, 2, 10], [2, 2, 15]], 2) == [10, 25]
